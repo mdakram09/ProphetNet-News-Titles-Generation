@@ -1,0 +1,5 @@
+pip install numpy==1.19.3
+pip install jupyter notebook
+pip install sentencepiece
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+pip install transformers

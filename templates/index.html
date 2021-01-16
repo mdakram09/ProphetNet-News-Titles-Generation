@@ -16,86 +16,87 @@
 
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-</head>
+        <link href="style.css" rel="stylesheet" crossorigin="anonymous">
+
+
+      </head>
 
 
 <body>
-    <nav class="navbar-expand-lg navbar navbar-dark bg-primary" >
-        <div class="container-fluid" >
-            <a class="navbar-brand" href="#">
-                <img src="../static/images/download.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
-                iNews
-              </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" >Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Contact Us</a>
-              </li>
-              
-            </ul>
-            
-          </div>
-        </div>
-      </nav>
+    
+  <!-- Navbar starts-->
 
 
 
-
-
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../static/images/Patel.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>India beat australia by 243 runs</h5>
-              <p>ndia have rolled up Australia for 65, with only two of their batsmen scoring in double figures. Yadav was the star, knocking over the first five wickets to fall even before he'd finished bowling five overs himself. This would have been the biggest loss for Australia in a One-Day game, if this was an official match.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="../static/images/Patel.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>India beat australia by 243 runs</h5>
-              <p>ndia have rolled up Australia for 65, with only two of their batsmen scoring in double figures. Yadav was the star, knocking over the first five wickets to fall even before he'd finished bowling five overs himself. This would have been the biggest loss for Australia in a One-Day game, if this was an official match.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="../static/images/Patel.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>India beat australia by 243 runs</h5>
-              <p>ndia have rolled up Australia for 65, with only two of their batsmen scoring in double figures. Yadav was the star, knocking over the first five wickets to fall even before he'd finished bowling five overs himself. This would have been the biggest loss for Australia in a One-Day game, if this was an official match.</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+    <div class="container"><a href="#" class="navbar-brand d-flex align-items-center"> <i class="fa fa-snowflake-o fa-lg text-primary mr-2"></i><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+      <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+      <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+    </svg>   iNews</strong></a>
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="#" class="nav-link font-italic"> Home </a></li>
+          <li class="nav-item active"><a href="/templates/aboutus.html" class="nav-link font-italic"> About Us</a></li>
+          <li class="nav-item active"><a href="#" class="nav-link font-italic"> Services </a></li>
+          <li class="nav-item active"><a href="#" class="nav-link font-italic"> Contact</a></li>
+        </ul>
       </div>
+    </div>
+  </nav>
+
+
+  <!-- Navbar ends-->
+
+
+
+<!-- carousal starts -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../static/images/jeffrey-f-lin-V1I7qRDztWE-unsplash.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../static/images/johann-rosch-JgDjK1c4UIU-unsplash.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../static/images/linda-mynhardt-5aDpgA9mofY-unsplash.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
 
 <br>
 <br>
 <br>
 
 
-
+<!-- crousal ends-->
 
 
     <div class="">
@@ -124,7 +125,7 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label></label>
-                        <button type="button" class="btn btn-primary btn-lg btn-block rounded-pill"
+                        <button type="button" class="btn btn-dark btn-lg btn-block rounded-pill"
                             id="btn-process">Generate</button>
                     </div>
                 </div>
@@ -137,6 +138,14 @@
             <div class="col-sm-1"></div>
         </div>
     </div>
+
+
+
+    <footer class="bg-light pb-5">
+      <div class="container text-center">
+        <p class="font-italic text-muted mb-0">&copy; Copyrights Company.com All rights reserved.</p>
+      </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
