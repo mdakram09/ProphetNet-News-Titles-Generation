@@ -21,6 +21,16 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+
+@app.route("/aboutus")
+def aboutus():
+    return render_template('aboutus.html')
+
+
+@app.route("/contactus")
+def contactus():
+    return render_template('contactus.html')
+
 # @app.route('/predict', methods=['POST'])
 # def predict():
 #     try:
