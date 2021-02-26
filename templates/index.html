@@ -59,41 +59,42 @@
   </center>
 </div>
 <br>
-<div class="card-group" >
-{% for i in articles[:4] %}
+<div class="card-group">
+  {% for i in articles[:4] %}
 
-<div class="card border border-light">
-  <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px  alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{ i['title'] }}</h5> 
-    <span><b>Published: </b><i>{{ i['publishedAt'][:10]}}</i></span>
-    <p class="card-text">{{ i['description'][:100] }}... </p>
+  <div class="card border border-light">
+    <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ i['title'] }}</h5>
+      <span><b>Published: </b><i>{{ i['publishedAt'][:10]}}</i></span>
+      <p class="card-text">{{ i['description'][:100] }}... </p>
 
-    <!-- <button type="button" class="btn btn-dark btn-lg  btn-block rounded-pill" id="btn-process">Generate</button> -->
-    <a href="{{i['url']}}" class="btn btn-primary rounded-pill" id="btn-process">Read more</a>
-  </div>
-</div>
-
-{% endfor %}
-</div>
-
-
-<div class="card-group" >
-{% for i in articles[4:8] %}
-
-<div class="card border border-light">
-
-  <img class="card-img-top" src="{{i['urlToImage']}}" height=175px  alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{ i['title'] }}</h5> 
-    <span><b>Published: </b><i>{{ i['publishedAt'][:10]}}</i></span>
-    <p class="card-text">{{ i['description'][:100]}}... </p>
+      <!-- <button type="button" class="btn btn-dark btn-lg  btn-block rounded-pill" id="btn-process">Generate</button> -->
+      <a href="{{i['url']}}" class="btn btn-primary rounded-pill" id="btn-process">Read more</a>
+    </div>
     
-    <a href="{{i['url']}}" class="btn btn-primary rounded-pill" id="btn-process">Read more</a>
   </div>
+
+  {% endfor %}
 </div>
 
-{% endfor %}
+
+<div class="card-group">
+  {% for i in articles[4:8] %}
+
+  <div class="card border border-light">
+
+    <img class="card-img-top" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ i['title'] }}</h5>
+      <span><b>Published: </b><i>{{ i['publishedAt'][:10]}}</i></span>
+      <p class="card-text">{{ i['description'][:100]}}... </p>
+
+      <a href="{{i['url']}}" class="btn btn-primary rounded-pill" id="btn-process">Read more</a>
+    </div>
+  </div>
+
+  {% endfor %}
 </div>
 
 

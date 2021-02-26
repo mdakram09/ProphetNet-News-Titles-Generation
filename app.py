@@ -53,6 +53,26 @@ def contactus():
 def topics():
     return render_template('topics.html')
 
+
+@app.route('/invalid')
+def invalid():
+    return "<center><h2 style='color:green;'>something went wrong..!</h2></center>"
+
+@app.route('/search', methods=['POST','GET'])
+def search():
+    if request.method =='POST':
+            data =request.form['search']
+            if not data:
+                return redirect(url_for('invalid'))
+            else:
+                url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+                articles = get_data(url)
+                return render_template('search.html',articles=articles,data=data)
+        
+    #print(get_data(url)) 
+    #else:
+      #  redirect(url_for('index.html'))
+
 # @app.route('/predict', methods=['POST'])
 # def predict():
 #     try:
