@@ -49,9 +49,11 @@ def contactus():
     return render_template('contactus.html')
 
 
-@app.route("/topics")
-def topics():
-    return render_template('topics.html')
+@app.route("/tech")
+def tech():
+    url= ('https://newsapi.org/v2/everything?q='+'tech'+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+    articles = get_data(url)
+    return render_template('tech.html',articles=articles)
 
 
 @app.route('/invalid')
