@@ -1,7 +1,8 @@
 import flask
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,url_for,redirect
 #from transformers import XLMProphetNetTokenizer, XLMProphetNetForConditionalGeneration, ProphetNetConfig
 import json
+import requests
 
 #PROPHETNET_PATH = 'model/prophetnet'
 
@@ -17,9 +18,25 @@ app = Flask(__name__)
 #     result = tokenizer.batch_decode(summary_ids, skip_special_tokens=True)
 #     return result[0]
 
+
+url = ('https://newsapi.org/v2/top-headlines?'
+       'country=in&'
+       'apiKey=58f304ff540642adbe4816847fcefbc4')
+def get_data(url):
+    response = requests.get(url)
+    data = response.json()
+    articles = data['articles']
+    return articles
+
+articles = get_data(url)
+
+
+
+
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',articles=articles)
 
 
 @app.route("/aboutus")
@@ -30,6 +47,11 @@ def aboutus():
 @app.route("/contactus")
 def contactus():
     return render_template('contactus.html')
+
+
+@app.route("/topics")
+def topics():
+    return render_template('topics.html')
 
 # @app.route('/predict', methods=['POST'])
 # def predict():
