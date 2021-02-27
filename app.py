@@ -174,12 +174,6 @@ def trending():
 
 
 
-@app.route('/news', methods=['POST','GET'])
-def news():
-    articles = get_data(url)
-    return render_template('news.html',articles=articles)
-
-
 @app.route('/invalid')
 def invalid():
     return "<center><h2 style='color:green;'>something went wrong..!</h2></center>"
