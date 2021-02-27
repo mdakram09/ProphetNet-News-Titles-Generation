@@ -49,11 +49,128 @@ def contactus():
     return render_template('contactus.html')
 
 
-@app.route("/tech")
-def tech():
-    url= ('https://newsapi.org/v2/everything?q='+'tech'+'&apiKey=58f304ff540642adbe4816847fcefbc4')
-    articles = get_data(url)
-    return render_template('tech.html',articles=articles)
+@app.route('/corona', methods=['POST','GET'])
+def corona():
+    data ='corona'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+
+@app.route('/india', methods=['POST','GET'])
+def india():
+    data ='india'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/sports', methods=['POST','GET'])
+def sports():
+    data ='sports'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/entertainment', methods=['POST','GET'])
+def entertainment():
+    data ='entertainment'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/technology', methods=['POST','GET'])
+def technology():
+    data ='technology'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/education', methods=['POST','GET'])
+def education():
+    data ='education'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/gaming', methods=['POST','GET'])
+def gaming():
+    data ='gaming'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/jobs', methods=['POST','GET'])
+def jobs():
+    data ='jobs'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/stockmarket', methods=['POST','GET'])
+def stockmarket():
+    data ='stock market'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/weather', methods=['POST','GET'])
+def weather():
+    data ='weather'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
+@app.route('/trending', methods=['POST','GET'])
+def trending():
+    data ='trending'
+    if not data:
+        return redirect(url_for('invalid'))
+    else:
+        url= ('https://newsapi.org/v2/everything?q='+data+'&apiKey=58f304ff540642adbe4816847fcefbc4')
+        articles = get_data(url)
+        return render_template('topics.html',articles=articles,data=data)
+
+
 
 
 @app.route('/invalid')

@@ -62,7 +62,7 @@
 <div class="card-group">
   {% for i in articles[:4] %}
 
-  <div class="card border border-light">
+  <div class="card border border-primary">
     <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{ i['title'] }}</h5>
@@ -72,7 +72,7 @@
       <!-- <button type="button" class="btn btn-dark btn-lg  btn-block rounded-pill" id="btn-process">Generate</button> -->
       <a href="{{i['url']}}" class="btn btn-primary rounded-pill" id="btn-process">Read more</a>
     </div>
-    
+
   </div>
 
   {% endfor %}
@@ -82,7 +82,7 @@
 <div class="card-group">
   {% for i in articles[4:8] %}
 
-  <div class="card border border-light">
+  <div class="card border border-primary">
 
     <img class="card-img-top" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
     <div class="card-body">
@@ -119,7 +119,7 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/coronavirus-black-48dp.svg">
-          <h4 class="title"><a href="">Corona</a></h4>
+          <h4 class="title"><a href="/corona">Corona</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -127,7 +127,7 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/gavel-black-48dp.svg">
-          <h4 class="title"><a href="">Politics</a></h4>
+          <h4 class="title"><a href="/india">India</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -135,7 +135,7 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/sports_baseball-24px.svg">
-          <h4 class="title"><a href="">Sports</a></h4>
+          <h4 class="title"><a href="/sports">Sports</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -143,7 +143,7 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/live_tv-24px.svg">
-          <h4 class="title"><a href="">Entertainment</a></h4>
+          <h4 class="title"><a href="/entertainment">Entertainment</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -154,17 +154,21 @@
 
 
     <div class="row">
+
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img src="../static/images/icons/biotech-24px.svg">
-          <h4 class="title"><a href="/tech">Science & Technology</a></h4>
-          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-        </div>
+        
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <img src="../static/images/icons/biotech-24px.svg">
+            <h4 class="title"><a href="/technology" style="text-decoration: none;">Science & Technology</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+      
       </div>
+
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/school-24px.svg">
-          <h4 class="title"><a href="">Education</a></h4>
+          <h4 class="title"><a href="/education">Education</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -172,7 +176,7 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/sports_esports-24px.svg">
-          <h4 class="title"><a href="">Gaming</a></h4>
+          <h4 class="title"><a href="/gaming">Gaming</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -180,7 +184,7 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/public-24px.svg">
-          <h4 class="title"><a href="">World</a></h4>
+          <h4 class="title"><a href="/jobs">Jobs</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -195,14 +199,14 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/trending_up-24px.svg">
-          <h4 class="title"><a href="">Share Market</a></h4>
+          <h4 class="title"><a href="/stockmarket">Stock Market</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/filter_drama-24px.svg">
-          <h4 class="title"><a href="">Wheather</a></h4>
+          <h4 class="title"><a href="/weather">Weather</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
@@ -210,7 +214,7 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <img src="../static/images/icons/timeline-24px.svg">
-          <h4 class="title"><a href="">Trending</a></h4>
+          <h4 class="title"><a href="/trending">Trending</a></h4>
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
         </div>
       </div>
