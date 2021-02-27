@@ -1,0 +1,30 @@
+{% extends "layoutsearch.html" %}
+
+{% block  content %}
+
+
+
+
+<div class="card-group">
+    {% for i in articles[:1] %}
+  
+    
+      <img  src="{{i['urlToImage']}}" height=475px alt="Card image cap">
+      
+        <h5 >{{ i['title'] }}</h5>
+        <span><b>Published: </b><i>{{ i['publishedAt'][:10]}}</i></span>
+        <p >{{ i['description'] }}</p>
+  
+        <!-- <button type="button" class="btn btn-dark btn-lg  btn-block rounded-pill" id="btn-process">Generate</button> -->
+       
+    
+  
+    
+  
+    {% endfor %}
+  </div>
+  
+
+
+
+{% endblock  %}}

@@ -39,6 +39,7 @@ def index():
     return render_template('index.html',articles=articles)
 
 
+
 @app.route("/aboutus")
 def aboutus():
     return render_template('aboutus.html')
@@ -47,6 +48,7 @@ def aboutus():
 @app.route("/contactus")
 def contactus():
     return render_template('contactus.html')
+
 
 
 @app.route('/corona', methods=['POST','GET'])
@@ -171,6 +173,11 @@ def trending():
         return render_template('topics.html',articles=articles,data=data)
 
 
+
+@app.route('/news', methods=['POST','GET'])
+def news():
+    articles = get_data(url)
+    return render_template('news.html',articles=articles)
 
 
 @app.route('/invalid')
