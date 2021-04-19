@@ -1,8 +1,10 @@
 import flask
-from flask import Flask, request, render_template,url_for,redirect
+from flask import Flask, request, render_template,url_for,redirect,jsonify
 #from transformers import XLMProphetNetTokenizer, XLMProphetNetForConditionalGeneration, ProphetNetConfig
 import json
 import requests
+import tweepy
+from textblob import TextBlob
 
 
 # for stock sentiment analysis
@@ -42,7 +44,41 @@ def get_data(url):
 
 articles = get_data(url)
 
+#---------------------------------------------------------------------------
 
+consumer_key = 'bPpe2CRgA0Pm1MJjSuZtNf4Zx'
+consumer_secret = 'Sp7NGFMVXJSVK1TdWl17oBxXnXKW0FTlDF37GXmtu4VyS3ME9v'
+
+access_token = '919085302743891970-6404BnbEEpqNKYuoowO4aKfmkbI9Jty'
+access_token_secret = 'IzWqkkHatwsYevLzkl3H37ANk7XkdnhfMfnoa0XhrNWeZ'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth)
+
+#-------------------------------------------------------------------------
+
+
+@app.route("/twitter")
+def twitter():
+    return render_template('twitter.html')
+
+
+
+@app.route("/searchtweet",methods=["POST"])
+def searchtweet():
+    search_tweet = request.form.get("search_query")
+    
+    t = []
+    tweets = api.search(search_tweet, tweet_mode='extended')
+    for tweet in tweets:
+        polarity = TextBlob(tweet.full_text).sentiment.polarity
+        subjectivity = TextBlob(tweet.full_text).sentiment.subjectivity
+        t.append([tweet.full_text,polarity,subjectivity])
+        # t.append(tweet.full_text)
+
+    return jsonify({"success":True,"tweets":t})
 
 
 
