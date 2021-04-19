@@ -4,6 +4,18 @@ from flask import Flask, request, render_template,url_for,redirect
 import json
 import requests
 
+
+# for stock sentiment analysis
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from nltk.corpus import stopwords
+import nltk
+
+nltk.download('stopwords')
+
+set(stopwords.words('english'))
+
 #PROPHETNET_PATH = 'model/prophetnet'
 
 app = Flask(__name__)
@@ -48,6 +60,27 @@ def aboutus():
 @app.route("/contactus")
 def contactus():
     return render_template('contactus.html')
+
+
+@app.route("/stocksentiment")
+def stocksentiment():
+    return render_template('stocksentiment.html')
+
+
+
+@app.route('/stocksentiment', methods=['POST'])
+def stocksentimentlogic():
+    stop_words = stopwords.words('english')
+    test_data = request.form['test_data'].lower()
+
+    processed_data = ' '.join([word for word in test_data.split() if word not in stop_words])
+
+    sia = SentimentIntensityAnalyzer()
+    dd = sia.polarity_scores(text=processed_data)
+    compound = round((1 + dd['compound'])/2, 2)
+
+    return render_template('stocksentiment.html', final=compound, test_data=test_data)
+
 
 
 

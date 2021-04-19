@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<br><br><br><br>
+
+<div class="container" style="text-align: center;">
+    <h1>    Stock Sentiment Analysis using News Headlines   </h1>
+    <form method="POST">
+        <textarea name="test_data" placeholder="Enter your Headline" rows="10" cols="109"></textarea><br><br>
+
+        <input class="example_a btn btn-primary my-2 my-sm-0 rounded-pill" type="submit">
+    </form>
+    <br>
+    {% if final %}
+    <div>
+        <h2>The Sentiment of this news is {{ final*100 }} % positive</h2>
+        {% else %}
+        <p></p>
+        {% endif %}
+    </div>
+   
+
+</div>
+
+
+{% endblock %}
