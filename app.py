@@ -46,11 +46,11 @@ articles = get_data(url)
 
 #---------------------------------------------------------------------------
 
-consumer_key = 'bPpe2CRgA0Pm1MJjSuZtNf4Zx'
-consumer_secret = 'Sp7NGFMVXJSVK1TdWl17oBxXnXKW0FTlDF37GXmtu4VyS3ME9v'
+consumer_key = ''
+consumer_secret = ''
 
-access_token = '919085302743891970-6404BnbEEpqNKYuoowO4aKfmkbI9Jty'
-access_token_secret = 'IzWqkkHatwsYevLzkl3H37ANk7XkdnhfMfnoa0XhrNWeZ'
+access_token = ''
+access_token_secret = ''
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
