@@ -247,7 +247,7 @@ def trending():
 def invalid():
     return "<center><h2 style='color:green;'>something went wrong..!</h2></center>"
 
-@app.route('/search', methods=['POST','GET'])
+@app.route('/searchnews', methods=['POST','GET'])
 def search():
     if request.method =='POST':
             data =request.form['search']
