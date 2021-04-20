@@ -66,7 +66,7 @@ def twitter():
 
 
 
-@app.route("/searchtweet",methods=["POST"])
+@app.route("/search",methods=["GET","POST"])
 def searchtweet():
     search_tweet = request.form.get("search_query")
     
