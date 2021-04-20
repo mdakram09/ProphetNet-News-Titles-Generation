@@ -3,7 +3,7 @@
 <br><br><br><br>
 
 <div class="container" style="text-align: center;">
-    <h1>    Stock Sentiment Analysis using News Headlines   </h1>
+    <h1>    News Sentiment Analysis using News Headlines   </h1><br>
     <form method="POST">
         <textarea name="test_data" placeholder="Enter your Headline" rows="10" cols="109"></textarea><br><br>
 
@@ -12,7 +12,7 @@
     <br>
     {% if final %}
     <div>
-        <h2>The Sentiment of this news is {{ final*100 }} % positive</h2>
+        <h2 style="line-height: 50px;">The Sentiment of the headline ''{{ test_data }}'' is {{ final*100 }} % positive</h2>
         {% else %}
         <p></p>
         {% endif %}
