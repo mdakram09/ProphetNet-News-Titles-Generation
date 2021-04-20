@@ -44,7 +44,7 @@ def get_data(url):
 
 articles = get_data(url)
 
-#---------------------------------------------------------------------------
+#---------------- USE YOU API BY CREATING DEVELOPER ACCOUNT ON TWITTER -----------------------------------------------------------
 
 consumer_key = ''
 consumer_secret = ''
